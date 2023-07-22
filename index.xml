@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sleepy Coder</title>
-    <link>https://devdiary.me/</link>
+    <link>https://thedevdiary.me/</link>
     <description>Recent content on Sleepy Coder</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://devdiary.me/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://thedevdiary.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://devdiary.me/about/</link>
+      <link>https://thedevdiary.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdiary.me/about/</guid>
+      <guid>https://thedevdiary.me/about/</guid>
       <description>About </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://devdiary.me/blog/first/</link>
+      <link>https://thedevdiary.me/blog/first/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdiary.me/blog/first/</guid>
+      <guid>https://thedevdiary.me/blog/first/</guid>
       <description>First </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://devdiary.me/blog/second/</link>
+      <link>https://thedevdiary.me/blog/second/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devdiary.me/blog/second/</guid>
+      <guid>https://thedevdiary.me/blog/second/</guid>
       <description>Second </description>
     </item>
     

@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://devdiary.me/about/</loc>
+    <loc>https://thedevdiary.me/about/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://devdiary.me/blog/first/</loc>
+    <loc>https://thedevdiary.me/blog/first/</loc>
   </url><url>
-    <loc>https://devdiary.me/blog/second/</loc>
+    <loc>https://thedevdiary.me/blog/second/</loc>
   </url><url>
-    <loc>https://devdiary.me/blog/</loc>
+    <loc>https://thedevdiary.me/blog/</loc>
   </url><url>
-    <loc>https://devdiary.me/categories/</loc>
+    <loc>https://thedevdiary.me/categories/</loc>
   </url><url>
-    <loc>https://devdiary.me/</loc>
+    <loc>https://thedevdiary.me/</loc>
   </url><url>
-    <loc>https://devdiary.me/tags/</loc>
+    <loc>https://thedevdiary.me/tags/</loc>
   </url>
 </urlset>
