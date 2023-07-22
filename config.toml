@@ -1,0 +1,47 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Sleepy Coder'
+theme="nightfall"
+
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    weight = 0
+    url = "blog/"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+#   [[menu.header]]
+#     name = "home"
+#     weight = 1
+#     url = "/"
+
+[params]
+author = "Sleepy Coder"
+user = "hello"
+hostname = "sumit"
+
+readingTime = true  # Show reading time on post page
+published = true  # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/gohugoio"
+
+[[params.social]]
+key = 1
+name = "twitter"
+url = "https://www.example.com"
+
+[[params.social]]
+key = 2
+name = "linkedin"
+url = "https://www.example.com"
+
+[[params.social]]
+key = 3
+name = "email"
+url = "mailto:email@example.com"
