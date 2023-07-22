@@ -1,4 +1,4 @@
-baseURL = 'https://devdiary.me/'
+baseURL = 'https://thedevdiary.me/'
 languageCode = 'en-us'
 title = 'Sleepy Coder'
 theme="nightfall"
