@@ -7,41 +7,40 @@ theme="nightfall"
 [menu]
   [[menu.header]]
     name = "blog"
-    weight = 0
+    weight = 2
     url = "blog/"
   [[menu.header]]
     name = "about"
     weight = 1
     url = "about"
-#   [[menu.header]]
-#     name = "home"
-#     weight = 1
-#     url = "/"
+  [[menu.header]]
+    name = "bookshelf"
+    weight = 3
+    url = "/bookshelf"
 
 [params]
 author = "Sleepy Coder"
-user = "hello"
-hostname = "sumit"
+user = "dev"
+hostname = "diary"
 
-readingTime = true  # Show reading time on post page
+readingTime = false  # Show reading time on post page
 published = true  # Show published data on post page
 
 [[params.social]]
 key = 0
-name = "github"
-url = "https://github.com/gohugoio"
+name = "Github"
+url = "https://github.com/sum28it"
+icon = "svg/icons8-github.svg"
 
 [[params.social]]
 key = 1
-name = "twitter"
-url = "https://www.example.com"
+name = "Linkedin"
+url = "https://www.linkedin.com/in/sumit-kumar-prasad-569728189/"
+icon = "svg/icons8-linkedin-logo.svg"
+
 
 [[params.social]]
 key = 2
-name = "linkedin"
-url = "https://www.example.com"
-
-[[params.social]]
-key = 3
-name = "email"
-url = "mailto:email@example.com"
+name = "Email"
+url = "mailto:prasad28sumit@gmail.com"
+icon = "svg/icons8-gmail.svg"
