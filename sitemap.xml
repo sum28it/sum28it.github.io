@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://thedevdiary.me/about/</loc>
-    <priority>0</priority>
+    <loc>https://thedevdiary.me/bookshelf/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thedevdiary.me/blog/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thedevdiary.me/tags/emoji/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thedevdiary.me/blog/first/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thedevdiary.me/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://thedevdiary.me/tags/</loc>
+    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://thedevdiary.me/blog/second/</loc>
   </url><url>
-    <loc>https://thedevdiary.me/blog/</loc>
+    <loc>https://thedevdiary.me/about/</loc>
   </url><url>
     <loc>https://thedevdiary.me/categories/</loc>
-  </url><url>
-    <loc>https://thedevdiary.me/</loc>
-  </url><url>
-    <loc>https://thedevdiary.me/tags/</loc>
   </url>
 </urlset>

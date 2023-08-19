@@ -5,6 +5,16 @@
     <link>https://thedevdiary.me/tags/</link>
     <description>Recent content in Tags on Sleepy Coder</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://thedevdiary.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>emoji</title>
+      <link>https://thedevdiary.me/tags/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/emoji/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

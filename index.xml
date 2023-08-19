@@ -5,23 +5,24 @@
     <link>https://thedevdiary.me/</link>
     <description>Recent content on Sleepy Coder</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://thedevdiary.me/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://thedevdiary.me/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>My Bookshelf</title>
+      <link>https://thedevdiary.me/bookshelf/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thedevdiary.me/about/</guid>
-      <description>About </description>
+      <guid>https://thedevdiary.me/bookshelf/</guid>
+      <description>Currently Reading Database Internals Books Read Learning Go by Jon Bodner Concurrency in Go Understanding Distributed Systems Microservices Patterns by Chris Richardson gRPC Up &amp;amp; Running Kubernetes Up &amp;amp; Running </description>
     </item>
     
     <item>
-      <title></title>
+      <title>Emoji Support</title>
       <link>https://thedevdiary.me/blog/first/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/first/</guid>
-      <description>First This is my first blog.</description>
+      <description>This is the first blog</description>
     </item>
     
     <item>
@@ -31,6 +32,15 @@
       
       <guid>https://thedevdiary.me/blog/second/</guid>
       <description>Second </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://thedevdiary.me/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/about/</guid>
+      <description>Hi! I&amp;rsquo;m someone who is bla bla bla&amp;hellip;&amp;hellip;</description>
     </item>
     
   </channel>
