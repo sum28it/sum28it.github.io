@@ -18,14 +18,16 @@ pre code {
   font-family: $fontCode;
   font-size: 75%;
   display: block;
-  background: $backgroundDarker;
+  background: $codeBackground;
   padding: 10px;
   overflow: auto;
 }
 
 code {
   font-family: $fontCode;
-  font-size: 75%;
+  font-size: 85%;
+  color: $codeFontColor;
+
 }
 
 @for $i from 1 through 6 {

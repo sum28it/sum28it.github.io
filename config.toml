@@ -1,6 +1,6 @@
 baseURL = 'https://thedevdiary.me/'
 languageCode = 'en-us'
-title = 'Sleepy Coder'
+title = 'Dev Diary'
 theme="nightfall"
 
 
@@ -19,7 +19,7 @@ theme="nightfall"
     url = "/bookshelf"
 
 [params]
-author = "Sleepy Coder"
+author = "The Dev Diary"
 user = "dev"
 hostname = "diary"
 
@@ -44,3 +44,6 @@ key = 2
 name = "Email"
 url = "mailto:prasad28sumit@gmail.com"
 icon = "svg/icons8-gmail.svg"
+
+
+

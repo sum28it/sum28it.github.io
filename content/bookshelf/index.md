@@ -17,22 +17,22 @@ Books have also sparked my curiosity and passion for software engineering, which
 
 In short, books have made me a better software engineer by shaping my mind, heart, and soul. They have given me the knowledge, skills, attitude, and inspiration that I need to succeed in this field. I am grateful for all the books that I have read, and I look forward to reading more books that will help me grow as a software engineer. -->
 
-
 One of the best decisions I ever made in my career as a software engineer was to study books. Books have given me the opportunity to learn from the experts, to understand the principles and practices of software development, and to expand my knowledge and skills in various domains.
 
-Of course, books are not the only source of learning for me. I also watch video courses when I need to get familiar with some topic at first by seeing examples, and learning the basics. But books help me dive deeper. They allow me to explore the details, the nuances, the trade-offs, and the alternatives.
+Of course, books are not the only source of learning for me. I also love to read engineering blogs, and watch conferences, but books help me to get well-rounded and comprehensive knowledge about the topic. They allow me to explore the details, the nuances, the trade-offs, and the alternatives.
 
+---
 
-### Currently Reading
+## Currently Reading
 
 - [ ] Database Internals
 
 ## Books Read
 
-- [x] [Learning Go by Jon Bodner](https://www.goodreads.com/en/book/show/55841848)
-- [x] [Concurrency in Go](https://www.goodreads.com/book/show/30413199)
+- [x] Learning Go by Jon Bodner
+- [x] Concurrency in Go
 - [x] Understanding Distributed Systems
 - [x] Microservices Patterns by Chris Richardson
 - [x] gRPC Up & Running
 - [x] Kubernetes Up & Running
-- [x] Docker Deep Dive by Nigel Poulton 
+- [x] Docker Deep Dive by Nigel Poulton
