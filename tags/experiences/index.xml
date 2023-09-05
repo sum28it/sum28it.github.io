@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>experiences on Dev Diary</title>
+    <link>https://thedevdiary.me/tags/experiences/</link>
+    <description>Recent content in experiences on Dev Diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/experiences/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My learning experience with Go and Nodejs</title>
+      <link>https://thedevdiary.me/blog/go_and_nodejs/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/blog/go_and_nodejs/</guid>
+      <description>A little talk about my expeprience with Go and Nodejs.</description>
+    </item>
+    
+  </channel>
+</rss>

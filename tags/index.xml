@@ -1,18 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Sleepy Coder</title>
+    <title>Tags on Dev Diary</title>
     <link>https://thedevdiary.me/tags/</link>
-    <description>Recent content in Tags on Sleepy Coder</description>
+    <description>Recent content in Tags on Dev Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>emoji</title>
-      <link>https://thedevdiary.me/tags/emoji/</link>
+      <title>experiences</title>
+      <link>https://thedevdiary.me/tags/experiences/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/experiences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://thedevdiary.me/tags/go/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://thedevdiary.me/tags/nodejs/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backend</title>
+      <link>https://thedevdiary.me/tags/backend/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>https://thedevdiary.me/tags/http/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://thedevdiary.me/tags/database/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://thedevdiary.me/tags/emoji/</guid>
+      <guid>https://thedevdiary.me/tags/database/</guid>
       <description></description>
     </item>
     

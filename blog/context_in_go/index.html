@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>
+Context in Go - Explained | The Dev Diary
+</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="generator" content="Hugo 0.110.0">
+
+
+<link rel="canonical" href="https://thedevdiary.me/blog/context_in_go/" >
+<link href="/sass/main.min.246424037d4ce4c9ef4936a2bf7fb7d3317ebc6810bc67415c661f85231c98f0.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a href="https://thedevdiary.me/">
+                <span class="terminal">dev@diary ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                
+                <li>
+                    <a href="https://thedevdiary.me/about" title="" >
+                        ~/about</a>
+                </li>
+                
+                <li>
+                    <a href="https://thedevdiary.me/blog/" title="" >
+                        ~/blog</a>
+                </li>
+                
+                <li>
+                    <a href="https://thedevdiary.me/bookshelf" title="" >
+                        ~/bookshelf</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="content">
+            <main class="main">
+                
+<div class="postWrapper">
+    <h1>Context in Go - Explained</h1>
+    <hr>
+    
+    <section class="postMetadata">
+        <dl>
+            
+                
+<dt>tags</dt>
+<dd><span></span>
+    <a href="/tags/go/">#go</a></dd>
+            
+            
+            
+            
+                <dt>published</dt>
+                
+                <dd><time datetime="2023-02-05">February 5, 2023</time></dd>
+            
+            
+        </dl>
+    </section>
+    
+    <div class="postBody">
+        <p>I have been using Go for a while now and I really enjoy its simplicity and concurrency features. However, one thing that puzzled me was the context package. What is it for? How does it work? And why do I need it?</p>
+<p>In this blog post, I will try to answer these questions and share my experience with using context in Go. I hope you find it useful and informative.</p>
+<h2 id="what-is-context">What is context?</h2>
+<p>According to the official documentation, context is a package that &ldquo;provides functionality for passing request-scoped values, cancelation signals, and deadlines across API boundaries to all the goroutines involved in handling a request&rdquo;. In other words, context is a way of passing information and control signals along the call stack of your program.</p>
+<h2 id="why-do-we-need-context">Why do we need context?</h2>
+<p>One of the main reasons we need context is to handle cancelation. Imagine having a web server that handles incoming requests from clients. Each request spawns a new goroutine that performs some work, such as querying a database, calling an external API, or doing some computation. Now, what if the client decides to cancel the request or the request has timed out ? How do we notify the goroutine that it should stop working and free up the resources?</p>
+<p>This is where context comes in handy. We can create a context with a cancel function and pass it to the goroutine. The cancel function can be called by the calling function when it no longer needs the goroutine to be working on the request. The goroutine can then check the context for cancelation signals and abort its work gracefully.</p>
+<p>Let&rsquo;s take an example to demonstrate how context is used along with the <code>net/http</code> package. We will make an http request to <code>https://www.github.com</code> and add a deadline for our request to timeout.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Create a context with deadline   
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">_</span><span style="color:#f92672">:=</span><span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithDeadline</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>(),<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>().<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Millisecond</span>))
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">buf</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">Reader</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;https://www.github.com&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Create a new request and pass the context with deadline
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">request</span>,<span style="color:#a6e22e">err</span><span style="color:#f92672">:=</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequestWithContext</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">MethodGet</span>,<span style="color:#a6e22e">url</span>,<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">buf</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span><span style="color:#f92672">!=</span><span style="color:#66d9ef">nil</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Make an http request request on url
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">_</span>,<span style="color:#a6e22e">err</span>=<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultClient</span>.<span style="color:#a6e22e">Do</span>(<span style="color:#a6e22e">request</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Check the err, if the deadline has exceeded or not
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span><span style="color:#f92672">!=</span><span style="color:#66d9ef">nil</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In the above code we created a context with deadline by calling the context.WithDeadline function that takes a parent context and a deadline for the context to timeout. context.Background returns an empty context which we have used as parent and set a deadline of 10 ms. We perform a get request to <code>https://www.github.com</code> and check for any errors. The request takes more than 10 ms to complete, so the request times out and is terminated before completion.</p>
+<p>Another reason we need context is to pass request-scoped values. Sometimes, we may want to associate some information with a request and make it available to all the functions involved in handling it. For example, we may want to pass a user ID, a trace ID, or some other metadata. Context allows us to store these values in a map-like structure and access them anywhere in the call stack.</p>
+<h2 id="how-does-context-work">How does context work?</h2>
+<p>The Context package in itself is not very large. The package defines only three types and the entire source code is barely few hundred lines.
+Context is an interface that has four methods -</p>
+<ul>
+<li><code>Deadline()(time.Time, bool)</code> - Deadline returns the time when the context will be canceled, if any.</li>
+<li><code>Done() &lt;- chan struct{}</code> - Done returns a channel that is closed when the context is canceled or expired.</li>
+<li><code>Err() error</code> - Err returns the error that caused the context to be canceled, if any.</li>
+<li><code>Value(any) any</code> - Value returns the value associated with a key in the context, if any.</li>
+</ul>
+<p>We do not need to implement the interface ourselves, functions like context.Background() or context.TODO() return an empty struct that implements the context interface</p>
+<p>A CancelFunc is a function that cancels the context.</p>
+<p>The context package also provides some functions to create and manipulate contexts:</p>
+<ul>
+<li>Background returns an empty context that is never canceled and has no values. It is typically used as the root of a context tree.</li>
+<li>TODO returns an empty context that is never canceled and has no values. It is typically used as a placeholder when you are not sure what context to use or if you are planning to add one later.</li>
+<li>WithCancel returns a copy of a parent context with a new cancel function. The returned context is canceled when the cancel function is called or when the parent context is canceled, whichever happens first.</li>
+<li>WithDeadline returns a copy of a parent context with a deadline. The returned context is canceled when the deadline is reached or when the parent context is canceled, whichever happens first.</li>
+<li>WithTimeout returns a copy of a parent context with a timeout. The returned context is canceled when the timeout expires or when the parent context is canceled, whichever happens first.</li>
+<li>WithValue returns a copy of a parent context with a new key-value pair. The returned context can be used to pass request-scoped values along the call stack.</li>
+</ul>
+<p>In the first example, we used <code>context.WithDeadline</code> to create a context with a deadline. This example will demonstrate how to pass values with context and use <code>context.WithTimeout</code> for cancellation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Create a basic HTTP server
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#a6e22e">handler</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handler</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Create a new context with a timeout of 5 seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Context</span>(), <span style="color:#ae81ff">5</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//Set value in the context with a key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Note: Not a good practice to use in-built type as key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span> = <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithValue</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#e6db74">&#34;myKey&#34;</span>, <span style="color:#e6db74">&#34;myValue&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Pass the context to another function that does some work
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">result</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">doWork</span>(<span style="color:#a6e22e">ctx</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Handle error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">WriteHeader</span>(<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusInternalServerError</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Write response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">result</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">doWork</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Simulate some work that takes 10 seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Get the value set in the context 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Value</span>(<span style="color:#e6db74">&#34;myKey&#34;</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Check if the context is canceled
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Done</span>():
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Return an error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Return some result
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> []byte(<span style="color:#e6db74">&#34;Hello, world!&#34;</span>), <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, we create a new context with a timeout of 5 seconds, set a value and pass it to the doWork function. The doWork function simulates some work that takes 10 seconds and checks if the context is canceled before returning. If the context is canceled, it returns an error. Otherwise, it returns some result.</p>
+<p>If we run this program and send a request to the server, we will see that the request is canceled after 5 seconds and the server returns an internal server error. This is because the context is canceled by the timeout and the doWork function returns an error.</p>
+<p>However, if we send a request and close the browser before 5 seconds, we will see that the request is also canceled and the server prints &ldquo;context canceled&rdquo;. This is because the context is canceled by the web server when it detects that the client has disconnected.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>In this blog post, I have explained what context is, why we need it, and how it works in Go. I hope you have learned something new and useful. Context is a powerful tool that can help you handle cancelation and pass request-scoped values in your Go programs. However, it also comes with some caveats and best practices that you should be aware of. For more information, I recommend reading the official documentation and this <a href="https://dave.cheney.net/2017/01/26/context-is-for-cancelation">blog post by Dave Cheney</a>.</p>
+<p>Thank you for reading and happy coding!</p>
+
+    </div>
+</div>
+
+            </main>
+        </div>
+
+
+        <footer class="footer">
+    
+        <span>
+            © 2023 The Dev Diary, Built with
+            <a href="https://gohugo.io" class="footerLink">Hugo</a> 
+        </span>
+    
+</footer>
+    </div>
+
+</body>
+
+</html>

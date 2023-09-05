@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on Dev Diary</title>
+    <link>https://thedevdiary.me/tags/database/</link>
+    <description>Recent content in database on Dev Diary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Isolation Levels</title>
+      <link>https://thedevdiary.me/blog/database_isolation_levels/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
+      <description>Explain how isolation works in databases</description>
+    </item>
+    
+  </channel>
+</rss>
