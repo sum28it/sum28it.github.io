@@ -83,12 +83,20 @@ HTTP vs HTTP 2.0 | The Dev Diary
     </section>
     
     <div class="postBody">
-        <p>HTTP stands for Hypertext Transfer Protocol. It is the protocol that enables communication between different systems, transferring information and data over a network. HTTP is widely used on the web, as it allows web browsers and web servers to communicate and exchange web pages and other resources.</p>
-<h2 id="a-detailed-blog-about-http-and-its-technical-aspects">A Detailed Blog About HTTP and Its Technical Aspects</h2>
+        <h2 id="what-is-http">What is HttP?</h2>
 <p>HTTP, or Hypertext Transfer Protocol, is an application-layer protocol for transmitting hypermedia documents, such as HTML. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser .</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="evolution-of-http">Evolution of HTTP</h2>
-<p>HTTP has evolved over time to meet the changing needs and demands of the Web. The original version of HTTP, HTTP/0.9, was a simple protocol that only supported GET requests and plain text responses. The next version, HTTP/1.0, introduced headers, methods, status codes, and MIME types to support different kinds of resources and data formats. HTTP/1.1, the most widely used version of HTTP, added features such as persistent connections, chunked encoding, pipelining, caching, compression, and conditional requests to improve performance, efficiency, and reliability. HTTP/2, the latest version of HTTP, introduced a binary framing layer, multiplexing, stream prioritization, server push, and header compression to further enhance speed, security, and flexibility. HTTP/3, the emergent version of HTTP, is based on QUIC, a new transport protocol that uses UDP instead of TCP and provides built-in encryption, congestion control, and error correction .</p>
-<p>HTTP and HTTP 2.0 are two versions of the same application protocol used to exchange information on the World Wide Web. HTTP stands for Hypertext Transfer Protocol and it was first released in the early 1990s as a simple way to communicate between clients and servers over the Internet. HTTP 2.0 is a major revision of HTTP that was standardized in 2015 and aims to improve the performance, efficiency and security of web applications. In this blog post, we will explore the main differences between HTTP and HTTP 2.0, the problems that HTTP faces and how HTTP 2.0 tries to solve them, how both protocols are implemented and how to choose between them.</p>
+<p>The Hypertext Transfer Protocol (HTTP) has evolved over time to improve performance, security, and features. Here is a brief overview of the evolution of HTTP:</p>
+<ul>
+<li><strong>HTTP/0.9</strong>: The first version of HTTP, released in 1991. It was a very simple protocol that only supported the GET - method and did not support persistent connections.</li>
+<li><strong>HTTP/1.0</strong>: The second version of HTTP, released in 1996. It added support for more methods, such as POST, PUT, and DELETE, and it also supported persistent connections.</li>
+<li><strong>HTTP/1.1</strong>: The third version of HTTP, released in 1997. It made a number of improvements to the protocol, including support for caching, pipelining, and compression.</li>
+<li><strong>HTTP/2</strong>: The fourth version of HTTP, released in 2015. It is a major revision of the protocol that introduces a number of new features, such as multiplexing, header compression, and server push.</li>
+<li><strong>HTTP/3</strong>: The fifth version of HTTP, still in development. It is designed to improve performance over lossy networks, such as the Internet.</li>
+</ul>
+<p>HTTP/2 is the most widely used version of HTTP today. It is supported by most web browsers and web servers. HTTP/3 is still in development, but it is expected to become more widely used in the future.</p>
 <h2 id="how-http-works">How HTTP Works</h2>
 <p>HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response. HTTP is a stateless protocol, meaning that the server does not keep any data (state) between two requests. However, some mechanisms, such as cookies and sessions, can be used to maintain state information across multiple requests .</p>
 <p>A typical HTTP session consists of the following steps:</p>
@@ -104,6 +112,7 @@ HTTP vs HTTP 2.0 | The Dev Diary
 <li><strong>Redundant and verbose headers</strong>: As mentioned before, HTTP 1.1 sends redundant and verbose header fields in each request and response, which increases the size of the messages and wastes bandwidth. This problem is worsened by the fact that some header fields (such as cookies) can be very large and contain sensitive information that should not be exposed or tampered with.</li>
 <li><strong>Unencrypted communication</strong>: HTTP 1.1 does not provide any encryption or security mechanisms by default, which means that all requests and responses are sent in plain text over the network, which exposes them to eavesdropping, interception, modification or injection attacks. To secure HTTP communication, HTTPS (HTTP over TLS) is often used, which adds encryption and authentication layers on top of HTTP. However, HTTPS also adds additional overhead and complexity to the protocol.</li>
 </ul>
+<p><img src="/images/blogs/http_vs_http2.0/multiplexing.svg" alt="http vs http2.0"></p>
 <h2 id="what-is-http-20">What is HTTP 2.0?</h2>
 <p>HTTP 2.0 is a major revision of HTTP that was derived from an experimental protocol called SPDY, originally developed by Google. HTTP 2.0 was developed by the HTTP Working Group of the Internet Engineering Task Force (IETF) and published as RFC 7540 in May 2015.</p>
 <p>HTTP 2.0 maintains high-level compatibility with HTTP 1.1, meaning that it uses the same methods, status codes, URIs and most header fields as HTTP 1.1. However, it introduces significant changes in how the data is framed and transported between the client and the server.</p>
