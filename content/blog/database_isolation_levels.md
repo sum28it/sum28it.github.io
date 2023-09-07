@@ -27,9 +27,8 @@ However, achieving perfect isolation is not always possible or desirable, becaus
 
 ### What are the four standard isolation levels?
 
-The four standard isolation levels are defined by the following phenomena that might occur when a transaction reads data that another transaction might have updated:
-
 ![Database Isolation levels and anomalies](/images/blogs/database_isolation_levels/TrasactionsIsolationsLevels.svg)
+The four standard isolation levels are defined by the following phenomena that might occur when a transaction reads data that another transaction might have updated:
 
 - __Dirty read:__ A dirty read occurs when a transaction reads data that has not yet been committed by another transaction. For example, if transaction T1 updates a row and leaves it uncommitted, and transaction T2 reads the same row before T1 commits or rolls back, then T2 has performed a dirty read. If T1 rolls back the change, T2 will have read data that is considered never to have existed.
 - __Non-repeatable read:__ A non-repeatable read occurs when a transaction reads the same row twice and gets a different value each time. For example, if transaction T1 reads a row, and then transaction T2 updates or deletes the same row and commits, and then T1 reads the same row again, then T1 has performed a non-repeatable read. The value that T1 read the first time is no longer valid.
