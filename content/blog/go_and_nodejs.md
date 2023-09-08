@@ -36,77 +36,23 @@ After building some simple REST based apps, I decided to learn about software ar
 
 Before Go, I had a good bit of experience in C, C++, so picking up a new language like Go was not very difficult. The syntax highly resmebles to C and a little bit to python too. I looked for some courses and found a good one on [Coursera](https://www.coursera.org/specializations/google-golang). I joined the Go community on reddit to see how people use Go and recommend learning it. The [Go tour](https://go.dev/tour/) was one must do thing recommended and it was a pleasant learning experience as well. The Go community was very helpful and resourceful as well. Although there was some bias, but it's pretty normal and can be found with anyone working with any particular technology for long time.
 
-Having known the syntax and basics of the language, I decided to build a project to solidify my understanding and built some CLI tools and REST APIs. One very likeable aspect of Go was it's standard library, and I'm not the only one saying that. The standard library covers most of the basic building blocks required, and is very well documented too. It was the first time I had read any documentation that thoroughly and happily.
+Having known the syntax and basics of the language, I decided to build a project to solidify my understanding and built some CLI tools and REST APIs. One very likeable aspect of Go was it's standard library, and I'm not the only one saying that. The standard library covers most of the basic building blocks required, and is very well documented too. It was the first time I had read any documentation that thoroughly and without much of googling.
 
 ## Why I sticked to GO ?
 
-For the first three years in my college I learned and played with many different technologies. Different languages, types of databases, software architectures, deployment techniques, and a bit of Machine learning as well. So, in the final year, I decided to streamline myself and focus on backend development and distributed systems. 
+For the first three years in my college I learned and played with many different technologies. Different languages, types of databases, software architectures, deployment techniques, and a bit of Machine learning as well. So, in the final year, I decided to streamline myself and focus on backend development and distributed systems.
 
-I went with Go, as till then I was comfortable enough to read the documentation and even browse through the source code if needed. Being able to read the soure code was such a confidence booster. I read more books to learn about best practices and idiomatic ways of writing. 
+I went with Go, as till then I was comfortable enough to read the documentation and even browse through the source code if needed. Being able to read the soure code was such a confidence booster. And for anyone who is programming for a long enough time, one just can't less appreciate the value of simplicity and type safety of Go.
+
+Though the tools doesn't matter much if you understand the concepts well enough, but as of now Go is my favorite one 
+to go with. 
 
 ## Which side am I leaning now ?
 
-There must be very little doubt about this question after reading through here. I am definitely more inclined towards Go, but I also do plan to learn Nodejs again and in depth. The easy going with Go can be credited to my previous exprience with Nodejs too. Before starting with Go, I was already well versed  
+![Which one am I going with](/images/blogs/go_and_nodejs/my_bias.svg)
+
+
+After reading through here, there must be very little doubt about this question. I am definitely more inclined towards Go, but I also appreciate the design choices of Nodejs and. The easy going with Go can be credited to my previous exprience with Nodejs too. Before starting with Go, I was already well versed with web concepts that put me ahead.
 
 
 
-
-
-
-
-
-
-<!-- 
-``` javascript
-// Importing express module
-const express = require("express")
-const app = express()
-
-// Handling GET / request
-app.use("/", (req, res, next) => {
-	res.send("This is the express server")
-})
-
-// Handling GET /hello request
-app.get("/hello", (req, res, next) => {
-	res.send("This is the hello response");
-})
-
-// Server setup
-app.listen(3000, () => {
-	console.log("Server is Running")
-})
-
-```
-
-
-```go
-package main
-
-import(
-    "http"
-    "log"
-)
-
-func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        w.Write([]byte("Go server"))
-    })
-	http.HandleFunc("/hello", gefunc(w http.ResponseWriter, r *http.Request){
-        w.Write([]byte("Hello Response"))
-    })
-
-	log.Fatal(http.ListenAndServe(":3333", nil))
-}
-```
-
-
-
-
-
-
-
-
-
-
- -->
