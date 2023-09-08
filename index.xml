@@ -6,7 +6,7 @@
     <description>Recent content on Dev Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Bookshelf</title>
       <link>https://thedevdiary.me/bookshelf/</link>
@@ -15,6 +15,15 @@
       <guid>https://thedevdiary.me/bookshelf/</guid>
       <description>One of the best decisions I ever made in my career as a software engineer was to study books. Books have given me the opportunity to learn from the experts, to understand the principles and practices of software development, and to expand my knowledge and skills in various domains.
 Of course, books are not the only source of learning for me. I also love to read engineering blogs, and watch conferences, but books help me to get well-rounded and comprehensive knowledge about the topic.</description>
+    </item>
+    
+    <item>
+      <title>Database Isolation Levels</title>
+      <link>https://thedevdiary.me/blog/database_isolation_levels/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
+      <description>Explain how isolation works in databases</description>
     </item>
     
     <item>
@@ -27,30 +36,21 @@ Of course, books are not the only source of learning for me. I also love to read
     </item>
     
     <item>
-      <title>Context in Go - Explained</title>
-      <link>https://thedevdiary.me/blog/context_in_go/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://thedevdiary.me/blog/context_in_go/</guid>
-      <description>This article explains how  the context package is used and how it works.</description>
-    </item>
-    
-    <item>
       <title>HTTP vs HTTP 2.0</title>
       <link>https://thedevdiary.me/blog/http_vs_http2.0/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/http_vs_http2.0/</guid>
       <description>This article explains how  the context package is used and how it works.</description>
     </item>
     
     <item>
-      <title>Database Isolation Levels</title>
-      <link>https://thedevdiary.me/blog/database_isolation_levels/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Context in Go - Explained</title>
+      <link>https://thedevdiary.me/blog/context_in_go/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
-      <description>Explain how isolation works in databases</description>
+      <guid>https://thedevdiary.me/blog/context_in_go/</guid>
+      <description>This article explains how  the context package is used and how it works.</description>
     </item>
     
     <item>

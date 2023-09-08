@@ -6,11 +6,11 @@
     <description>Recent content in backend on Dev Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/tags/backend/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP vs HTTP 2.0</title>
       <link>https://thedevdiary.me/blog/http_vs_http2.0/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/http_vs_http2.0/</guid>
       <description>This article explains how  the context package is used and how it works.</description>

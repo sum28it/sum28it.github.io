@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Dev Diary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://thedevdiary.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Isolation Levels</title>
+      <link>https://thedevdiary.me/blog/database_isolation_levels/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
+      <description>Explain how isolation works in databases</description>
+    </item>
+    
     <item>
       <title>My learning experience with Go and Nodejs</title>
       <link>https://thedevdiary.me/blog/go_and_nodejs/</link>
@@ -17,30 +26,21 @@
     </item>
     
     <item>
-      <title>Context in Go - Explained</title>
-      <link>https://thedevdiary.me/blog/context_in_go/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://thedevdiary.me/blog/context_in_go/</guid>
-      <description>This article explains how  the context package is used and how it works.</description>
-    </item>
-    
-    <item>
       <title>HTTP vs HTTP 2.0</title>
       <link>https://thedevdiary.me/blog/http_vs_http2.0/</link>
-      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/http_vs_http2.0/</guid>
       <description>This article explains how  the context package is used and how it works.</description>
     </item>
     
     <item>
-      <title>Database Isolation Levels</title>
-      <link>https://thedevdiary.me/blog/database_isolation_levels/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Context in Go - Explained</title>
+      <link>https://thedevdiary.me/blog/context_in_go/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
-      <description>Explain how isolation works in databases</description>
+      <guid>https://thedevdiary.me/blog/context_in_go/</guid>
+      <description>This article explains how  the context package is used and how it works.</description>
     </item>
     
   </channel>
