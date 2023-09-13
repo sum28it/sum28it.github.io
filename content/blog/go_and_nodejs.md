@@ -38,7 +38,7 @@ Before Go, I had a good bit of experience in C, C++, so picking up a new languag
 
 Having known the syntax and basics of the language, I decided to build a project to solidify my understanding and built some CLI tools and REST APIs. One very likeable aspect of Go was it's standard library, and I'm not the only one saying that. The standard library covers most of the basic building blocks required, and is very well documented too. It was the first time I had read any documentation that thoroughly and without much of googling.
 
-## Why I sticked to GO ?
+## Why I chose GO ?
 
 For the first three years in my college I learned and played with many different technologies. Different languages, types of databases, software architectures, deployment techniques, and a bit of Machine learning as well. So, in the final year, I decided to streamline myself and focus on backend development and distributed systems.
 
