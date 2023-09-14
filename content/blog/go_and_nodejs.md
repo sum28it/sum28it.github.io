@@ -34,7 +34,7 @@ After building some simple REST based apps, I decided to learn about software ar
 
 ![go-mascot](/images/blogs/go_and_nodejs/go-mascot.svg)
 
-Before Go, I had a good bit of experience in C, C++, so picking up a new language like Go was not very difficult. The syntax highly resmebles to C and a little bit to python too. I looked for some courses and found a good one on [Coursera](https://www.coursera.org/specializations/google-golang). I joined the Go community on reddit to see how people use Go and recommend learning it. The [Go tour](https://go.dev/tour/) was one must do thing recommended and it was a pleasant learning experience as well. The Go community was very helpful and resourceful as well. Although there was some bias, but it's pretty normal and can be found with anyone working with any particular technology for long time.
+Before Go, I had a good bit of experience in C, C++, so picking up a new language like Go was not very difficult. The syntax highly resembles to C and a little bit to python too. I looked for some courses and found a good one on [Coursera](https://www.coursera.org/specializations/google-golang). I joined the Go community on reddit to see how people use Go and recommend learning it. The [Go tour](https://go.dev/tour/) was one must do thing recommended and it was a pleasant learning experience as well. The Go community was very helpful and resourceful as well. Although there was some bias, but it's pretty normal and can be found with anyone working with any particular technology for long time.
 
 Having known the syntax and basics of the language, I decided to build a project to solidify my understanding and built some CLI tools and REST APIs. One very likeable aspect of Go was it's standard library, and I'm not the only one saying that. The standard library covers most of the basic building blocks required, and is very well documented too. It was the first time I had read any documentation that thoroughly and without much of googling.
 
@@ -52,7 +52,7 @@ to go with.
 ![Which one am I going with](/images/blogs/go_and_nodejs/my_bias.svg)
 
 
-After reading through here, there must be very little doubt about this question. I am definitely more inclined towards Go, but I also appreciate the design choices of Nodejs and. The easy going with Go can be credited to my previous exprience with Nodejs too. Before starting with Go, I was already well versed with web concepts that put me ahead.
+After reading through here, there must be very little doubt about this question. I am definitely more inclined towards Go, but I also appreciate the diverse ecosystem of Nodejs. The easy going with Go can also be credited to my previous experience with Nodejs. Before starting with Go, I was already well versed with web concepts that put me ahead.
 
 
 
