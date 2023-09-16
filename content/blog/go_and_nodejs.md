@@ -22,13 +22,13 @@ A year and a half back, I started learning web development or to say server-side
 
 The first thing that I found on Youtube was like ```build a web server with nodejs and express```. While it was super easy to build a server with just a few lines of code, I didn't understand a bit how it's working, I could just see it working. And the fact that nobody was teaching nodejs, everybody just seemed to build web server, create a few endpoints to build a CRUD app and that's it. It was a bit annoying, like I see it working, I can build it on my own machine as well, but I don't understand what's going on behind the scenes.
 
-I decided to take a break from videos and read the documentation. I headed to [nodejs.dev](https://nodejs.dev/en/learn/) to learn the fundamentals. I benefittd a lot from this section and started to read more. I searched for books but surprisingly found very few good books. This was unexpected for such a popular technology. After some more effort, I finally decided to build a project. It wasn't a very complex one, but I tried to put in test what I had learned so far and build a RESt API with CRUD features.
+I decided to take a break from videos and read the documentation. I headed to [nodejs.dev](https://nodejs.dev/en/learn/) to learn the fundamentals. I benefitted a lot from this section and started to read more. I searched for books but surprisingly found very few good books. This was unexpected for such a popular technology. After some more effort, I finally decided to build a project. It wasn't a very complex one, but I tried to put in test what I had learned so far and build a REST API with CRUD features.
 
-## How I got introduced to Go ?
+## My Introduction to Go ?
 
-Choosing to learn Go wasn't due to any technical reasons or flaws of Nodejs. I dare not say that I had run into some performance bottleneck that made me switch to go. Infact, most web or application servers do not have that high performance requirements and generally bottlenecks are present somewhere else in the system. 
+Choosing to learn Go wasn't due to any technical reasons or flaws of Nodejs. I dare not say that I had run into some performance bottleneck that made me switch to go. In fact, most web or application servers do not have that high performance requirements and generally bottlenecks are present somewhere else in the system. 
 
-After building some simple REST based apps, I decided to learn about software architectures. One very buzzing word was Microservices. It can be heard all over the web how it's the present and the future of software architecture. Whether it is or not, is a topic  for some other day. Having the ability to build polyglot softwares was one of the key benefits of microservice architecture. Go was one popular choices for building microservices, some of the reasons being it's high performance, concurrency and scalability.
+After building some simple REST based apps, I decided to learn about software architectures. One very buzzing word was Microservices. It can be heard all over the web how it's the present and the future of software architecture. Whether it is or not, is a topic  for some other day. Having the ability to build polyglot software was one of the key benefits of microservice architecture. Go was one popular choices for building microservices, some of the reasons being it's high performance, concurrency and scalability.
 
 ## Getting started with GO
 

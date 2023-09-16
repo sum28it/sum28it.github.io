@@ -2,11 +2,11 @@
 author : "Sumit"
 title : "Context in Go - Explained"
 date : "2023-02-05"
-description : "What, Why and How of Context in Go"
+description : ""
 tags : [
     "go",
 ]
-summary: "This article explains how  the context package is used and how it works."
+summary: "What, Why and How of Context in Go "
 published : true
 ---
 

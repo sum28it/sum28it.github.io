@@ -6,7 +6,7 @@ description : "Analysis of diffeent isolation levels in databases"
 tags : [
     "database",
 ]
-summary: "Explain how isolation works in databases"
+summary: "Analysis of diffeent isolation levels in databases"
 published : true
 ---
 
