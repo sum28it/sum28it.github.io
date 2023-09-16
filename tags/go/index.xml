@@ -22,7 +22,7 @@
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/context_in_go/</guid>
-      <description>This article explains how  the context package is used and how it works.</description>
+      <description>What, Why and How of Context in Go</description>
     </item>
     
   </channel>

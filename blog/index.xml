@@ -13,7 +13,7 @@
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/database_isolation_levels/</guid>
-      <description>Explain how isolation works in databases</description>
+      <description>Analysis of diffeent isolation levels in databases</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/http_vs_http2.0/</guid>
-      <description>This article explains how  the context package is used and how it works.</description>
+      <description>HTTP1.1 vs HTTP2.0 ! What to Know?</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://thedevdiary.me/blog/context_in_go/</guid>
-      <description>This article explains how  the context package is used and how it works.</description>
+      <description>What, Why and How of Context in Go</description>
     </item>
     
   </channel>
